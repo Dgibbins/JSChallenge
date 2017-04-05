@@ -28,7 +28,7 @@ body,html {
   position: absolute;
 }
 
-.key, .key-bruce {
+.key {
   border: .4rem solid black;
   border-radius: .5rem;
   margin: 1rem;
@@ -42,8 +42,9 @@ body,html {
   text-shadow: 0 0 .5rem black;
 }
 
+
 .playing {
-  transform: scale(1.1);
+  transform: scale(1.15);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
 }
