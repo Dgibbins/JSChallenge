@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data-Key Directory</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="display">
+      <div class="wrap">
+        <p class="keycode"></p>
+        <p class="input-key"></p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    //  we want to capture each key stroke, find it's code, then append each to their proper div.
+    window.addEventListener('keydown', function(e){
+      console.log(e); //Shows all data pertaining to keydown.
+      console.log(e.keyCode);
+      console.log(e.key);
+      var keyCode = e.keyCode;
+      console.log(keyCode);
+      var key = e.key;
+    });
+
+  </script>
+</html>
