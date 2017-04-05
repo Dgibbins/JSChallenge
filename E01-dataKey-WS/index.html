@@ -9,8 +9,8 @@
 
     <div class="display">
       <div class="wrap">
-        <p class="keycode"></p>
-        <p class="input-key"></p>
+        <p class="keycode" id="keycode"></p>
+        <p class="input-key" id="input-key"></p>
       </div>
     </div>
   </body>
@@ -18,12 +18,20 @@
   <script>
     //  we want to capture each key stroke, find it's code, then append each to their proper div.
     window.addEventListener('keydown', function(e){
-      console.log(e); //Shows all data pertaining to keydown.
-      console.log(e.keyCode);
-      console.log(e.key);
-      var keyCode = e.keyCode;
-      console.log(keyCode);
-      var key = e.key;
+      // accessing data from event listener.
+      // console.log(e);
+      // console.log(e.keyCode);
+      // console.log(e.key);
+
+      var keyCodeContent = e.keyCode;
+      var keyContent = e.key;
+
+      document.getElementById("keycode").innerHTML = keyCodeContent;
+      document.getElementById("input-key").innerHTML = keyContent.toUpperCase();
+      // var keyCodeDiv = document.getElementByClassName(".keycode");
+      // var keyDiv = document.getElementByClassName(".input-key");
+
+
     });
 
   </script>
