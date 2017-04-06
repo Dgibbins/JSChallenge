@@ -13,26 +13,29 @@
         <p class="input-key" id="input-key"></p>
       </div>
     </div>
+
+    <div class="history">
+      <p id="logHistory"></p>
+    </div>
   </body>
 
   <script>
     //  we want to capture each key stroke, find it's code, then append each to their proper div.
-    window.addEventListener('keydown', function(e){
-      // accessing data from event listener.
-      // console.log(e);
-      // console.log(e.keyCode);
-      // console.log(e.key);
+    function displayKey(e){
+     // accessing data from event listener.
+     // console.log(e);
+     // console.log(e.keyCode);
+     // console.log(e.key);
+     var keyCodeContent = e.keyCode;
+     var keyContent = e.key;
 
-      var keyCodeContent = e.keyCode;
-      var keyContent = e.key;
+     if (keyCodeContent === 32) {keyContent = "space";} //was not displaying key content for space...
 
-      document.getElementById("keycode").innerHTML = keyCodeContent;
-      document.getElementById("input-key").innerHTML = keyContent.toUpperCase();
-      // var keyCodeDiv = document.getElementByClassName(".keycode");
-      // var keyDiv = document.getElementByClassName(".input-key");
+     document.getElementById("keycode").innerHTML = keyCodeContent;
+     document.getElementById("input-key").innerHTML = keyContent.toUpperCase();
+   };
 
-
-    });
+    window.addEventListener('keydown', displayKey);
 
   </script>
 </html>
